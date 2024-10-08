@@ -33,7 +33,7 @@ public class Ejer9 {
 			 * saca piedra o si el jugador 1 saca tijera y el jugador 2 saca papel, el
 			 * jugador 1 ganará.
 			 */
-			if ((jugador1.equals("PAPEL")) && (jugador2.equals("PIEDRA")) || ((jugador1.equals("TIJERA")) && (jugador2.equals("PAPEL")))) {
+			if ((jugador1.equals("PAPEL")) && (jugador2.equals("PIEDRA")) || ((jugador1.equals("TIJERA")) && (jugador2.equals("PAPEL"))) || ((jugador1.equals("PIEDRA") && jugador2.equals("TIJERA")))) {
 				// Imprimimos que el jugador 1 ganará
 				System.out.println("JUGADOR 1 GANA");
 				// En caso de que no se cumpla la condición anterior, se ejecutará está instrucción
