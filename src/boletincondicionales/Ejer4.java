@@ -60,6 +60,8 @@ public class Ejer4 {
 			case 8 -> System.out.println("Ocho");
 			case 9 -> System.out.println("Nueve");
 			}
+			// Cerramos el Scanner.
+			sc.close();
 		}
 	}
 
