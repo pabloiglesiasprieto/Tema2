@@ -42,6 +42,8 @@ public class Ejer1 {
 			ultimacifra = numero % 10;
 			Capicua = primeracifra == ultimacifra;
 			System.out.println((Capicua) ? "Es capicua" : "No es capicua");
+ 		} else {
+ 			System.out.println("Pon un número entre 0 y 9999");
  		}
 		sc.close();
 	}

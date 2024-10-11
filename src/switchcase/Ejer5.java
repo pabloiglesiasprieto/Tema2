@@ -17,7 +17,7 @@ public class Ejer5 {
 		Scanner sc = new Scanner(System.in);
 		// Preguntamos al usuario que tipo de carnet tiene.
 		System.out.println("Introduce el tipo de carnet.");
-		carnet = sc.next();
+		carnet = sc.nextLine();
 		tipo = switch (carnet.toUpperCase()) {
 		case "E" -> {
 			yield "remolques";
