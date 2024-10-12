@@ -25,40 +25,40 @@ public class Ejer4 {
 		longitud = numeroString.length();
 		if (longitud == 1) {
 			switch (numero) {
-			case 1 -> System.out.println("Uno");
-			case 2 -> System.out.println("Dos");
-			case 3 -> System.out.println("Tres");
-			case 4 -> System.out.println("Cuatro");
-			case 5 -> System.out.println("Cinco");
-			case 6 -> System.out.println("Seis");
-			case 7 -> System.out.println("Siete");
-			case 8 -> System.out.println("Ocho");
-			case 9 -> System.out.println("Nueve");
+			case 1 -> System.out.print("uno");
+			case 2 -> System.out.print("dos");
+			case 3 -> System.out.print("tres");
+			case 4 -> System.out.print("cuatro");
+			case 5 -> System.out.print("cinco");
+			case 6 -> System.out.print("seis");
+			case 7 -> System.out.print("siete");
+			case 8 -> System.out.print("ocho");
+			case 9 -> System.out.print("nueve");
 			}
 		} else {
 			primerNumero = numero / 10;
 			segundoNumero = numero % 10;
 			switch (primerNumero) {
-			case 1 -> System.out.println("Diez");
-			case 2 -> System.out.println("Veinte");
-			case 3 -> System.out.println("Treinta");
-			case 4 -> System.out.println("Cuarenta");
-			case 5 -> System.out.println("Cincuenta");
-			case 6 -> System.out.println("Sesenta");
-			case 7 -> System.out.println("Setenta");
-			case 8 -> System.out.println("Ochenta");
-			case 9 -> System.out.println("Noventa");
+			case 1 -> System.out.print("Diez y ");
+			case 2 -> System.out.print("Veinte y ");
+			case 3 -> System.out.print("Treinta y ");
+			case 4 -> System.out.print("Cuarenta y ");
+			case 5 -> System.out.print("Cincuenta y ");
+			case 6 -> System.out.print("Sesenta y ");
+			case 7 -> System.out.print("Setenta y ");
+			case 8 -> System.out.print("Ochenta y ");
+			case 9 -> System.out.print("Noventa y ");
 			}
 			switch (segundoNumero) {
-			case 1 -> System.out.println("Uno");
-			case 2 -> System.out.println("Dos");
-			case 3 -> System.out.println("Tres");
-			case 4 -> System.out.println("Cuatro");
-			case 5 -> System.out.println("Cinco");
-			case 6 -> System.out.println("Seis");
-			case 7 -> System.out.println("Siete");
-			case 8 -> System.out.println("Ocho");
-			case 9 -> System.out.println("Nueve");
+			case 1 -> System.out.print("uno");
+			case 2 -> System.out.print("dos");
+			case 3 -> System.out.print("tres");
+			case 4 -> System.out.print("cuatro");
+			case 5 -> System.out.print("cinco");
+			case 6 -> System.out.print("seis");
+			case 7 -> System.out.print("siete");
+			case 8 -> System.out.print("ocho");
+			case 9 -> System.out.print("nueve");
 			}
 			// Cerramos el Scanner.
 			sc.close();
