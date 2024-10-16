@@ -12,7 +12,7 @@ public class Ejer2 {
 		 */
 		// Declaramos e inicializamos la variable que almacenará el valor dado por el
 		// usuario.
-		int numero = 0;
+		int numero;
 
 		// Declaramos e inicializamos la variable que almacenará las iteraciones.
 		int iteraciones = 0;
@@ -20,23 +20,31 @@ public class Ejer2 {
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
 
+		// Preguntamos al usuario que introduzca un número
+		System.out.println("Introduce el número");
+
+		// Leemos entrada de teclado
+		numero = sc.nextInt();
+
 		// Creamos un bucle
 		while (numero >= 0) {
+
+			// Incrementamos en 1 el contador de bucles.
+			iteraciones++;
+			
 			// Preguntamos al usuario que introduzca un número
 			System.out.println("Introduce el número");
 
 			// Leemos entrada de teclado
 			numero = sc.nextInt();
 
-			// Incrementamos en 1 el contador de bucles.
-			iteraciones++;
 		}
 		// Mensaje que indica la salida del bucle
 		System.out.println("Introduciste un número negativo");
 
 		// Imprimimos el total de iteraciones quitándole 1 unidad (El número negativo
 		// que introducimos).
-		System.out.println("Introduciste un total de " + --iteraciones + " numeros positivos");
+		System.out.println("Introduciste un total de " + iteraciones + " numeros positivos");
 
 		// Cerramos el Scanner.
 		sc.close();

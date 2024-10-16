@@ -38,7 +38,7 @@ public class Ejer6 {
 		System.out.println("Fin del bucle");
 
 		// Imprimimos el resultado
-		System.out.println("La altura máxima es de " + alturaMaxima);
+		System.out.println(alturaMaxima>=1 ? ("La altura máxima es de " + alturaMaxima) : "No has introducido ninguna altura");
 
 		// Cerramos el Scanner
 		sc.close();

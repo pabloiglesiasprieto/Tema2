@@ -26,7 +26,7 @@ public class Ejer4 {
 		int contador = 0;
 
 		// Creamos un contador para los números negativos.
-		int contadorNegativo = 0;
+		double contadorNegativo = 0;
 
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
@@ -43,6 +43,7 @@ public class Ejer4 {
 			// Si el número es mayor que 0, añadimos el valor de numero a sumaPositivos.
 			if (numero > 0) {
 				sumaPositivos += numero;
+				
 				// Imprimimos que el usuario repita otro número.
 				System.out.println("Introduce otro número");
 
