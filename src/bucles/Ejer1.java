@@ -12,7 +12,7 @@ public class Ejer1 {
 		 */
 		// Declaramos e inicializamos la variable que almacenará el número dado por el
 		// usuario.
-		int numero = 0;
+		int numero;
 
 		// Declaramos e inicializable la variable que almacenará el valor que se añadirá
 		// a número
