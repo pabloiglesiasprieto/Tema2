@@ -52,8 +52,10 @@ public class Ejer6 {
 					|| ((jugador1.equals("PIEDRA") && jugador2.equals("TIJERA")))) {
 				// Imprimimos que el Jugador 1 gana
 				System.out.println("JUGADOR 1 GANA");
-			} else {
+			} else if (jugador1.equals(jugador2)) {
 				// Imprimimos que el Jugador 2 gana
+				System.out.println("EMPATE");
+			} else {
 				System.out.println("JUGADOR 2 GANA");
 			}
 			// Le preguntamos al usuario si quiere seguir jugando
