@@ -11,55 +11,63 @@ public class Ejer5 {
 		 * una y otra vez hasta adivinarlo (el usuario deberá indicarle al ordenador si
 		 * es mayor, menor o igual al número que ha pensado).
 		 */
-		// Creamos una variable que almacenará el número dado por el usuario
-		int numeroUsuario;
+		// Declaramos la variable que almacenará el número dado por el usuario.
+		int numero;
 
-		// Creamos una varibale que almacenará el número generado por la máquina
-		int numeroAleatorio;
+		// Declaramos la variable que almacenará el número generado por la máquina
+		int maquina;
+
+		// Declaramos la variable que almacenará la elección de usuario.
+		String eleccion;
 
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
 
-		// Creamos Random
+		// Importamos la clase Random
 		Random random = new Random();
 
-		// Asignamos el valor del random
-		numeroAleatorio = random.nextInt(100) + 1;
-
-		// Le pedimos al usuario que introduzca un número
-		System.out.println("Introduce un número");
-
-		// Leemos entradad de teclado
-		numeroUsuario = sc.nextInt();
-
-		// Creamos un do-while
+		// Le preguntamos al usuario el número pensado.
+		System.out.println("Introduce un número entre [1,100]");
 		do {
-			// Si el número del usuario es mayor que el número aleatorio, se ejecutará el
-			// bloque.
-			if (numeroUsuario > numeroAleatorio) {
-				// Imprimimos que el número es menor.
-				System.out.println("Introduce un número menor");
-
-				// Si el número del usuario es menor que el número aleatorio, se ejecutará el
-				// bloque.
-			} else if (numeroUsuario < numeroAleatorio) {
-
-				// Imprimimos que el número es mayor.
-				System.out.println("Introduce un número mayor");
-			}
-			// Imprimimos que vuelve a introducir el número
-			System.out.println("Vuelve a introducir un número");
-
 			// Leemos entrada de teclado
-			numeroUsuario = sc.nextInt();
+			numero = sc.nextInt();
+			if (numero >= 1 && numero <= 100) {
+			} else {
+				System.out.println("Pon un valor correcto");
+			}
+		} while (!(numero >= 1 && numero <= 100));
 
-			// Hasta que número del usuario coincida con el número.
-		} while (numeroUsuario != numeroAleatorio);
+		// Imprimimos que el juego empieza.
+		System.out.println("El juego va a empezar.");
 
-		// Imprimimos salida de bucle
-		System.out.println("Ganaste");
+		// Inicializamos los límites del rango de búsqueda
+		int min = 1;
+		int max = 100;
 
-		// Cerramos Scanner
+		do {
+			// La máquina genera un número aleatorio dentro del rango
+			maquina = random.nextInt(max - min + 1) + min;
+
+			// Imprimimos el número dado por la máquina.
+			System.out.println("La máquina ha introducido el número " + maquina);
+
+			// Le preguntamos al usuario que introduzca si es mayor o menor
+			System.out.println("El número es mayor, menor o igual?");
+
+			eleccion = sc.next().toUpperCase();
+
+			if (eleccion.equals("MAYOR")) {
+				min = maquina + 1;
+			} else if (eleccion.equals("MENOR")) {
+				max = maquina - 1;
+			} else if (eleccion.equals("IGUAL")) {
+				System.out.println("¡La máquina ha adivinado el número!");
+			} else {
+				System.out.println("Introduce un valor válido");
+			}
+		} while (!eleccion.equals("IGUAL"));
+
+		System.out.println("Terminó la partida");
 		sc.close();
 	}
 }

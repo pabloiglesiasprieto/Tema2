@@ -19,56 +19,55 @@ public class Ejer6 {
 		// Declaramos la variable que almacenará el valor dado por el jugador2.
 		String jugador2;
 
+		// Declaramos la variable que almacenará la elección
+		String eleccion;
+
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
 
 		// Leemos entrada de teclado
 		do {
-			// Pedimos la elección del Jugador 1
-			System.out.println("Que elige el Jugador 1");
+			do {
 
-			// Leemos la elección y la convertimos a mayúsculas
-			jugador1 = sc.nextLine().toUpperCase();
+				// Pedimos la elección del Jugador 1
+				System.out.println("Que elige el Jugador 1");
 
-			// Verificamos si la elección es válida
-			if (jugador1.equals("TIJERA") || (jugador1.equals("PAPEL")) || jugador1.equals("PIEDRA")) {
-				// Si es válida, salimos del bucle
-				break;
+				// Leemos la elección y la convertimos a mayúsculas
+				jugador1 = sc.nextLine().toUpperCase();
+
+			} while ((!jugador1.equals("PIEDRA")) && (!jugador1.equals("PAPEL")) && (!jugador1.equals("TIJERA")));
+
+			do {
+
+				// Pedimos la elección del Jugador 1
+				System.out.println("Que elige el Jugador 2");
+
+				// Leemos la elección y la convertimos a mayúsculas
+				jugador2 = sc.nextLine().toUpperCase();
+
+			} while ((!jugador2.equals("PIEDRA")) && (!jugador2.equals("PAPEL")) && (!jugador2.equals("TIJERA")));
+
+			if ((jugador1.equals("PAPEL")) && (jugador2.equals("PIEDRA"))
+					|| ((jugador1.equals("TIJERA")) && (jugador2.equals("PAPEL")))
+					|| ((jugador1.equals("PIEDRA") && jugador2.equals("TIJERA")))) {
+				// Imprimimos que el Jugador 1 gana
+				System.out.println("JUGADOR 1 GANA");
 			} else {
-				// Si no es válida, pedimos un valor válido
-				System.out.println("Pon un valor válido");
+				// Imprimimos que el Jugador 2 gana
+				System.out.println("JUGADOR 2 GANA");
 			}
-		} while ((jugador1 != "PIEDRA") && (jugador1 != "PAPEL") && (jugador1 != "TIJERA"));
+			// Le preguntamos al usuario si quiere seguir jugando
+			System.out.println("Quieres seguir jugando");
 
-		do {
-			// Pedimos la elección del Jugador 2
-			System.out.println("Que elige el Jugador 2");
+			// Leemos entrada de teclado
+			// DUDA CON RESPECTO SC.NEXT Y SC.NEXTLINE
+			eleccion = sc.nextLine().toUpperCase();
 
-			// Leemos la elección y la convertimos a mayúsculas
-			jugador2 = sc.nextLine().toUpperCase();
-
-			// Verificamos si la elección es válida
-			if (jugador2.equals("TIJERA") || (jugador2.equals("PAPEL")) || jugador2.equals("PIEDRA")) {
-				// Si es válida, salimos del bucle
-				break;
-			} else {
-				// Si no es válida, pedimos un valor válido
-				System.out.println("Pon un valor válido");
-			}
-		} while (jugador2 != "PIEDRA" && jugador2 != "PAPEL" && jugador2 != "TIJERA");
-
-		if ((jugador1.equals("PAPEL")) && (jugador2.equals("PIEDRA"))
-				|| ((jugador1.equals("TIJERA")) && (jugador2.equals("PAPEL")))
-				|| ((jugador1.equals("PIEDRA") && jugador2.equals("TIJERA")))) {
-			// Imprimimos que el Jugador 1 gana
-			System.out.println("JUGADOR 1 GANA");
-		} else {
-			// Imprimimos que el Jugador 2 gana
-			System.out.println("JUGADOR 2 GANA");
-		}
-
+			// Si el usuario ha introducido la letra "S", se repite el juego
+		} while (eleccion.equals("S"));
+		// Imprimimos que terminó la partida
+		System.out.println("Terminaste la partida.");
 		// Cerramos el Scanner.
 		sc.close();
-
 	}
 }

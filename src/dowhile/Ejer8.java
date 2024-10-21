@@ -65,5 +65,8 @@ public class Ejer8 { // Declara la clase Ejer8
 
 		// Imprime la suma
 		System.out.println("La suma de los dados es de " + (tirada1 + tirada2));
+
+		// Cerramos el Scanner.
+		sc.close();
 	}
 }
