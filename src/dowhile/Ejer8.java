@@ -1,9 +1,8 @@
-package dowhile; // Define el paquete dowhile
+package dowhile;
+import java.util.Scanner;
 
-import java.util.Scanner; // Importa la clase Scanner para la entrada de datos
-
-public class Ejer8 { // Declara la clase Ejer8
-	public static void main(String[] args) { // Método principal
+public class Ejer8 { 
+	public static void main(String[] args) { 
 		/*
 		 * Repetir el ejercicio de los dados del boletín de SWITCH. Mientras en la
 		 * primera tirada no se introduzca un valor válido se le seguirá preguntando. Lo
