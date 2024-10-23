@@ -36,5 +36,7 @@ public class Ejer8 {
 			for (; b <= a; b++)
 				System.out.println(b);
 		}
+		// Cerramos el Scanner
+		sc.close();
 	}
 }
