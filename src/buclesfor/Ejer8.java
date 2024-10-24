@@ -30,9 +30,11 @@ public class Ejer8 {
 
 		// Creamos bucle
 		if (a < b) {
+			System.out.println("Numeros de " + a + " a " + b);
 			for (; a <= b; a++)
 				System.out.println(a);
 		} else if (a > b) {
+			System.out.println("Numeros de " + b + " a " + a);
 			for (; b <= a; b++)
 				System.out.println(b);
 		}
