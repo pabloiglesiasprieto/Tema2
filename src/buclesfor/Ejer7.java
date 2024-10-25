@@ -33,11 +33,10 @@ public class Ejer7 {
 			// Almacenamos el resto de numero entre i en resultado
 			resultado = numero % i;
 
-			// Si el resultado es 0 e i es distinto de 1 (Todo el mundo es divisible entre
-			// 1) entramos en la condición.
+			// Si el resultado es 0 
 			if (resultado == 0 ) {
 
-				// Asignamos el valor true al booleano
+				// Asignamos el valor false al booleano
 				primo = false;
 
 				// Rompemos el bucle.
