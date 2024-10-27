@@ -17,6 +17,8 @@ public class Ejer1 {
 		// Declaramos las variables que almacenará los segundos a incrementar.
 		int incremento;
 
+		int iteracion = 1;
+
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
 		do {
@@ -48,7 +50,7 @@ public class Ejer1 {
 
 		// Leemos entrada de teclado
 		incremento = sc.nextInt();
-		for (int i = 1; i <= incremento; i++) {
+		for (int i = 1; (iteracion <= incremento); iteracion++) {
 			segundos += i;
 			if (segundos >= 60) {
 				minutos += 1;
@@ -60,6 +62,7 @@ public class Ejer1 {
 			}
 		}
 		System.out.println("El tiempo es de " + horas + " horas, " + minutos + " minutos, " + segundos + " segundos.");
+		sc.close();
 	}
 
 }
