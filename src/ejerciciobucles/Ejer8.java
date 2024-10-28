@@ -21,21 +21,40 @@ public class Ejer8 {
 		System.out.println("Introduce el número");
 		// Leemos entrada de teclado
 		numero = sc.nextInt();
-		minimo = 0;
-		// Creamos un bucle
+
+		// Creamos un bucle.
+		// Si númeor es distinto de 0, se iterará
 		for (; numero != 0;) {
+			// Si mínimo es cero
 			if (minimo == 0) {
+				// Asignamos el valor de minimo a numero.
 				minimo = numero;
+
+				// Si no se cumple la condición
 			} else {
+
+				// Si numero es mayor al numero minimo
 				if (numero > minimo) {
+					// Asignamos al numero minimo a numero.
 					minimo = numero;
+
+					// Si no se cumple la condición se ejecutara este bucle
 				} else {
+					// Imprimimos que hay 1 error.
 					System.out.println("1 error");
+					// Incrementamos en 1 el error.
 					error++;
 				}
 			}
+			// Introducimos el valor mínimo
+			System.out.println("Introduce un número " + "el actual es " + minimo);
+			// Leemos entrada de teclado
+			numero = sc.nextInt();
 		}
+		// Imprimimos salida del bucle
 		System.out.println("Salida del bucle");
+		// Imprimimos el número de errores.
+		System.out.println("Hay un total de " + error + " errores");
 	}
 
 }

@@ -37,5 +37,7 @@ public class Ejer3 {
 
 		// Mostrar el resultado
 		System.out.println("El máximo común divisor de " + a + " y " + b + " es: " + mcd);
+		// Cerramos el Scanner.
+		scanner.close();
 	}
 }
