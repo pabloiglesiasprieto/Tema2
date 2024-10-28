@@ -38,5 +38,8 @@ public class Ejer4 {
 
 		// Mostrar el resultado
 		System.out.println("El mínimo común múltiplo de " + a + " y " + b + " es: " + mcm);
+
+		// Cerramos el Scanner
+		scanner.close();
 	}
 }

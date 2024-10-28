@@ -15,10 +15,7 @@ public class Ejer7 {
 
 		// Generar la pirámide
 		for (int i = 1; i <= n; i++) {
-			// Imprimir espacios para centrar la pirámide
-			for (int j = i; j < n; j++) {
-				System.out.print(" ");
-			}
+
 			// Imprimir la parte izquierda de la pirámide
 			for (int j = 1; j <= i; j++) {
 				System.out.print(j);

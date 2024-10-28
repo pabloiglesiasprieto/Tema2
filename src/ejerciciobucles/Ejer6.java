@@ -10,7 +10,7 @@ public class Ejer6 {
 		 */
 		// Declaramos la variable que almacenará la base y la altura del triangulo.
 		int batura;
-
+		int espaciado;
 		// Creamos un Scanner
 		Scanner sc = new Scanner(System.in);
 
@@ -18,16 +18,19 @@ public class Ejer6 {
 		System.out.println("Introduce la base.");
 		// Leemos entrada de teclado
 		batura = sc.nextInt();
-
+		espaciado = batura;
 		// Creamos un bucle
 		for (int i = 1; i <= batura; i++) {
+			for (int k = espaciado; k != 1; k--) {
+				System.out.print(" ");
+			}
 			for (int j = 0; j < i; j++) {
-				System.out.print("*");
+				System.out.print("* ");
 			}
 			System.out.println();
+			espaciado -= 1;
 		}
 		// Cerramos el Scanner
 		sc.close();
-
 	}
 }
