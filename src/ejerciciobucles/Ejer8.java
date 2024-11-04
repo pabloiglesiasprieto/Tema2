@@ -14,6 +14,7 @@ public class Ejer8 {
 		int numero;
 		int minimo = 0;
 		int error = 0;
+		int introducidos = 0;
 		// Creamos un Scanner.
 		Scanner sc = new Scanner(System.in);
 
@@ -24,7 +25,7 @@ public class Ejer8 {
 
 		// Creamos un bucle.
 		// Si númeor es distinto de 0, se iterará
-		for (; numero != 0;) {
+		while (numero != 0) {
 			// Si mínimo es cero
 			if (minimo == 0) {
 				// Asignamos el valor de minimo a numero.
@@ -37,6 +38,7 @@ public class Ejer8 {
 				if (numero > minimo) {
 					// Asignamos al numero minimo a numero.
 					minimo = numero;
+					introducidos++;
 
 					// Si no se cumple la condición se ejecutara este bucle
 				} else {
@@ -55,6 +57,7 @@ public class Ejer8 {
 		System.out.println("Salida del bucle");
 		// Imprimimos el número de errores.
 		System.out.println("Hay un total de " + error + " errores");
+		System.out.println("Hay un total de " + introducidos + " valores introducidos");
 	}
 
 }
